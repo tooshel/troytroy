@@ -131,6 +131,10 @@ main img {
 
 /* Photo thumbnails sit side by side with a little breathing room */
 
+main a:has(img) {
+  text-decoration: none;
+}
+
 main a img {
   margin: 4px 6px 4px 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);

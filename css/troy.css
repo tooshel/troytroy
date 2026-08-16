@@ -165,14 +165,17 @@ main a img {
     gap: 12px;
   }
 
-  #site-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2px 10px;
+  #site-nav ul,
+  #site-nav ul ul,
+  #site-nav li {
+    display: inline;
+    margin: 0;
+    font-size: 0.9375rem;
   }
 
-  #site-nav ul ul {
-    display: contents;
+  #site-nav a {
+    padding: 4px 8px;
+    margin: 2px 2px 2px 0;
   }
 }
 

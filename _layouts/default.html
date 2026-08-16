@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+<title>
+{{page.title}} | Troy's Memorial Website
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<style type="text/css" media="all">@import "css/troy.css";</style>
+
+<link rel="alternate stylesheet" type="text/css" media="screen" 
+title="alt3" href="css/troy.css" />
+<link rel="alternate stylesheet" type="text/css" media="screen" 
+title="print" href="css/print.css" />
+<link rel="stylesheet" type="text/css" media="print" href="css/print.css" />
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32031130-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body bgcolor="white">
+<div id="Content">
+
+<div id="top-section">
+<div id="top-col-1">
+	<a href="index.html">
+	<img src="images/darkmovingtrain2.gif" alt="" border="0"><br>
+	</a>
+	<hr noshade>
+</div>
+</div>
+
+<div id="top-section-print">
+<div id="top-col-1">
+	<img src="images/statictrain.gif" alt="" border="0">
+	<hr noshade>
+</div>
+</div>
+
+<div id="mid-section">
+
+<div id="mid-col-1">
+
+{% include main-nav.html %}
+
+</div>
+
+<div id="mid-col-2">
+
+
+{{page.content}}
+
+
+</div> <!-- end of col2 -->
+
+</div> <!-- end of mid-section -->
+
+<div id="bottom-section">
+
+<div id="bottom-col-1">
+<hr noshade>
+<h6>Contact sheldon at tooshel dot com if you have any questions.</h6>
+</div> 
+</div>
+
+</div>
+
+</body>
+</html>
+
+

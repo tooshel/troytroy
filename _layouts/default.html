@@ -1,83 +1,41 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-<title>
-{{page.title}} | Troy's Memorial Website
-</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<style type="text/css" media="all">@import "css/troy.css";</style>
-
-<link rel="alternate stylesheet" type="text/css" media="screen" 
-title="alt3" href="css/troy.css" />
-<link rel="alternate stylesheet" type="text/css" media="screen" 
-title="print" href="css/print.css" />
-<link rel="stylesheet" type="text/css" media="print" href="css/print.css" />
-
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-32031130-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }} | Troy's Memorial Website</title>
+<meta name="description" content="In memory of Troy Mackenzie White Matthews (Troy Troy).">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/css/troy.css">
 </head>
+<body>
 
-<body bgcolor="white">
-<div id="Content">
+<div id="content">
 
-<div id="top-section">
-<div id="top-col-1">
-	<a href="index.html">
-	<img src="images/darkmovingtrain2.gif" alt="" border="0"><br>
-	</a>
-	<hr noshade>
-</div>
-</div>
+<header id="site-header">
+  <a href="/">
+    <img class="train screen-only" src="/images/darkmovingtrain2.gif" alt="An animated train crossing the top of the page">
+    <img class="train print-only" src="/images/statictrain.gif" alt="A train">
+  </a>
+</header>
 
-<div id="top-section-print">
-<div id="top-col-1">
-	<img src="images/statictrain.gif" alt="" border="0">
-	<hr noshade>
-</div>
-</div>
+<div id="middle">
 
-<div id="mid-section">
-
-<div id="mid-col-1">
-
+<nav id="site-nav">
 {% include main-nav.html %}
+</nav>
+
+<main>
+{{ content }}
+</main>
 
 </div>
 
-<div id="mid-col-2">
-
-
-{{page.content}}
-
-
-</div> <!-- end of col2 -->
-
-</div> <!-- end of mid-section -->
-
-<div id="bottom-section">
-
-<div id="bottom-col-1">
-<hr noshade>
-<h6>Contact sheldon at tooshel dot com if you have any questions.</h6>
-</div> 
-</div>
+<footer id="site-footer">
+  <p>Contact sheldon at tooshel dot com if you have any questions.</p>
+</footer>
 
 </div>
 
 </body>
 </html>
-
-

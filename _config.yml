@@ -1,1 +1,4 @@
-auto: true
+title: Troy's Memorial Website
+url: https://www.troytroy.com
+exclude:
+  - README.md

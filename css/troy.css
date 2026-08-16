@@ -1,122 +1,213 @@
+/* troytroy.com — refreshed 2026, keeping the spirit of the 2003 design */
+
+:root {
+  --accent: #b90303;
+  --ink: #222;
+  --paper: #fff;
+  --backdrop: #666;
+  --rule: #ddd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-	color:black;
-	background-color: #666666;
+  margin: 0;
+  padding: 24px 12px;
+  color: var(--ink);
+  background-color: var(--backdrop);
+  font-family: Charter, Georgia, "Times New Roman", serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
 }
 
-#Content {
-	width:650px;
-	margin:0px auto;
-	text-align:left;
-	padding:20px 40px 20px 40px;
-	border:5px solid #333;
-	background-color: white;
-	
-     -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -khtml-border-radius: 10px;
-    border-radius: 10px;
+#content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 28px 36px;
+  background-color: var(--paper);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
 }
 
-#top-section {
-	position:relative;
-	left:0;
-	top:0;
-}
-#top-section-print {
-	float: none;
-	display: none;
-	position:relative;
-	left:0;
-	top:0;
+/* Header: the train */
+
+#site-header {
+  text-align: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
 }
 
-#mid-section {
-	position:relative;
-	left:0;
-	top:0;
-}
-#bottom-section {
-	position:relative;
-	left:0;
-	top:0;
+#site-header img.train {
+  max-width: 100%;
+  height: auto;
 }
 
-#top-col-1 {
-	position:relative;
-}
-#mid-col-1 {
-	position:absolute;
-	top:0;
-	left:0;
-	width:20%;
-}
-#mid-col-2 {
-	position:relative;
-	left:20%;
-	top:0;
-	width:80%;
+.print-only {
+  display: none;
 }
 
-/*
-#mid-col-3 {
-	position:absolute;
-	left:80%;
-	top:0;
-	width:20%;
-}
-*/
+/* Middle: nav + content, side by side on wide screens */
 
-#bottom-col-1 {
-	position:relative;
+#middle {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 24px;
+  padding-top: 20px;
 }
 
-#mid-col-1 a:link {
-	COLOR: #B90303;    TEXT-DECORATION: none; 	FONT-SIZE: 10pt;
-	FONT-FAMILY: Arial, Verdana, Helvetica;
-
-}
-#mid-col-1 a:visited {
-	COLOR: #B90303;    TEXT-DECORATION: none; 	FONT-SIZE: 10pt;
-	FONT-FAMILY: Arial, Verdana, Helvetica;
-}
-#mid-col-1 a:active {
-	COLOR: #B90303;    TEXT-DECORATION: none; 	FONT-SIZE: 10pt;
-	FONT-FAMILY: Arial, Verdana, Helvetica;
-}
-#mid-col-1 a:hover {
-	COLOR: white;  TEXT-DECORATION: none;	FONT-SIZE: 10pt;
-	background-color : #B90303;
-	FONT-FAMILY: Arial, Verdana, Helvetica;
+#site-nav {
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-size: 0.9375rem;
 }
 
-
-#mid-col-2 a:link
-{
-	COLOR: blue;  TEXT-DECORATION: none;
-}
-#mid-col-2 a:visited
-{
-	COLOR: blue;  TEXT-DECORATION: none;
-}
-#mid-col-2 a:active {
-	COLOR: yellow;  TEXT-DECORATION: none;
-}
-#mid-col-2 a:hover {
-	color:black;
-	text-decoration :underline;
-	background-color:red;
+#site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-	text-align: left;
-}
-h2 {
-	text-align: center;
-}
-h6 {
-	text-align: center; FONT-SIZE: 10pt;
+#site-nav ul ul {
+  margin: 2px 0 2px 14px;
+  font-size: 0.875rem;
 }
 
-br {
-	margin-bottom: 0px; 
+#site-nav li {
+  margin: 2px 0;
+}
+
+#site-nav a {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+#site-nav a:hover,
+#site-nav a:focus-visible {
+  color: #fff;
+  background-color: var(--accent);
+}
+
+/* Content */
+
+main {
+  min-width: 0;
+}
+
+main h1,
+main h2,
+main h3 {
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  line-height: 1.25;
+}
+
+main h1 {
+  margin-top: 0;
+}
+
+main h2 {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 4px;
+}
+
+main a {
+  color: #0b5394;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+main a:hover {
+  color: var(--accent);
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Photo thumbnails sit side by side with a little breathing room */
+
+main a img {
+  margin: 4px 6px 4px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Footer */
+
+#site-footer {
+  margin-top: 28px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-size: 0.8125rem;
+  color: #777;
+}
+
+/* Small screens: nav flows horizontally above the content */
+
+@media (max-width: 640px) {
+  body {
+    padding: 0;
+  }
+
+  #content {
+    border-radius: 0;
+    padding: 20px 18px;
+  }
+
+  #middle {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  #site-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 10px;
+  }
+
+  #site-nav ul ul {
+    display: contents;
+  }
+}
+
+/* Print: static train, no nav or chrome, just the words */
+
+@media print {
+  body {
+    padding: 0;
+    background: #fff;
+    font-size: 12pt;
+  }
+
+  #content {
+    max-width: none;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .screen-only,
+  #site-nav,
+  #site-footer {
+    display: none;
+  }
+
+  .print-only {
+    display: inline;
+  }
+
+  #middle {
+    display: block;
+  }
+
+  main a {
+    color: #000;
+    text-decoration: none;
+  }
 }
